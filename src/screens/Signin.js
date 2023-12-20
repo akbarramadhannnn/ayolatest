@@ -13,7 +13,7 @@ const Signin = ({navigation}) => {
   const [password, setPassword] = useState('');
   const [disabledButton, setDisabledButton] = useState(true);
   const [errorMessage, setErrorMessage] = useState('');
-  const [secureTextEntry, setSecureTextEntry] = useState(false);
+  const [secureTextEntry, setSecureTextEntry] = useState(true);
 
   useEffect(() => {
     if (email === '' || password === '') {
@@ -28,6 +28,8 @@ const Signin = ({navigation}) => {
       return () => {
         setEmail('');
         setPassword('');
+        setErrorMessage('');
+        setSecureTextEntry(true);
       };
     }, []),
   );

@@ -31,6 +31,8 @@ const Signup = ({navigation}) => {
       return () => {
         setEmail('');
         setPassword('');
+        setErrorMessage('');
+        setSecureTextEntry(true);
       };
     }, []),
   );

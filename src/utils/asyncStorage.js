@@ -3,7 +3,7 @@ import {USER_DATA, SIGNIN_DATA} from '@constants/asyncStorage';
 
 export const getUserData = async () => {
   const data = await AsyncStorage.getItem(USER_DATA);
-  return JSON.parse(data);
+  return JSON.parse(data) || [];
 };
 
 export const storeUserData = async data => {
